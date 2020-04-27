@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="./src/type.js"></script>
+    <script src="./src/utils.js"></script>
+    <script src="./src/index.js"></script>
+    <script>
+      const serverData = {
+        spTable: [
+          ['s/p', 0, '正确量', 'CSi', '正确率', '评价'],
+          ['甄子丹', 1, 1, 0, 100, 'A成绩优秀，发挥稳定'],
+          ['对题数', 1, null, null, null, null],
+          ['CPj', 0, null, null, null, null],
+        ],
+        totalScore: 1,
+        avgScore: 1,
+        sline: [[1, 1]],
+        pline: [[1, 1]],
+      }
+
+
+      // const data = {
+      //   spTable: [
+      //     {
+      //       name: '甄子丹', // spTable[i][0]
+      //       dec: 'A成绩优秀，发挥稳定' // spTable[i][length - 1]
+      //     }
+      //   ],
+      //   totalScore: '1'
+
+      // }
+      const dataModule = {
+        [$type]: $object,
+        spTable: {
+          [$type]: $array,
+          [$fields]: {
+            name: {
+              index: 0
+            },
+            dec: {
+              index: -1
+            }
+          }
+        },
+        totalScore: $string
+      }
+
+      const data = new Data(serverData, dataModule)
+
+      console.log(data)
+      data.getValue()
+    </script>
+  </body>
+</html>
