@@ -1,12 +1,12 @@
 // 基础类型
-const $string = Symbol('string')
-const $number = Symbol('number')
-const $undefined = Symbol('undefined')
-const $null = Symbol('null')
-const $array = Symbol('array')
-const $symbol = Symbol('symbol')
-const $object = Symbol('object')
+export const $string = Symbol('string')
+export const $number = Symbol('number')
+export const $undefined = Symbol('undefined')
+export const $null = Symbol('null')
+export const $array = Symbol('array')
+export const $symbol = Symbol('symbol')
+export const $object = Symbol('object')
 
 // 需要的字段
-const $type = Symbol('type')
-const $fields = Symbol('fields')
+export const $type = Symbol('type')
+export const $fields = Symbol('fields')

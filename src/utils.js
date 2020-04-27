@@ -1,4 +1,6 @@
-function isObject(){}
+export function isObject(obj){
+    return Object.prototype.toString.call(obj) === '[object Object]'
+}
 function isArray(){}
 function isString(){}
 function isNumber(){}

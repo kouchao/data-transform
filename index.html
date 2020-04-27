@@ -6,10 +6,12 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="./src/type.js"></script>
-    <script src="./src/utils.js"></script>
-    <script src="./src/index.js"></script>
+    <script src="./dist/index.js"></script>
     <script>
+      const {Data, type} = this['data-transform']
+      console.log(Data)
+
+      const {$type, $fields, $object, $array, $string} = type
       const serverData = {
         spTable: [
           ['s/p', 0, '正确量', 'CSi', '正确率', '评价'],
@@ -50,10 +52,10 @@
         totalScore: $string
       }
 
-      const data = new Data(serverData, dataModule)
+      const data = new Data.default(serverData, dataModule)
 
-      console.log(data)
-      data.getValue()
+      console.log(data.getValue())
+      
     </script>
   </body>
 </html>
